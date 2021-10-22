@@ -1,0 +1,20 @@
+{
+  "name": "autumnhackaton2021",
+  "version": "1.0.0",
+  "description": "Fantastic hackaton",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Daniel-Borovoy/AutumnHackaton2021.git"
+  },
+  "keywords": [
+    "React",
+    "Express",
+    "js"
+  ],
+  "author": "Reactor",
+  "license": "ISC"
+}
