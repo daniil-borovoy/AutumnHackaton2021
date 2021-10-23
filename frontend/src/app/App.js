@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import logo from '../logo.svg'
 import styles from './App.module.scss'
 import Chart from './chart/Chart'
+import Main from './main/Main'
 import { useHttp } from '../hooks/http.hook'
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
 	if (data) {
 		return (
 			<div className={styles.logo}>
-				<Chart data={data} />
+				{/* <Chart data={data} /> */}
+        <Main/>
 			</div>
 		)
 	}
