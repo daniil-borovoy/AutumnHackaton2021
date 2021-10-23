@@ -1,0 +1,4 @@
+{
+    "port": 8000,
+    "mongoUri": "mongodb+srv://TheGrids:alex32132@cluster0.wwrlc.mongodb.net/ForaBank?retryWrites=true&w=majority"
+}
