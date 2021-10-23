@@ -1,12 +1,14 @@
 import logo from '../logo.svg'
 import styles from './App.module.scss'
+import userData from './data.json'
+import Chart from './chart/Chart'
 
 function App() {
   return (
     <div className={styles.logo}>
-      <img  width={100} src={logo} alt='logo'></img>
+      <Chart data={userData}/>
     </div>
   )
 }
 
-export default App;
+export default App
