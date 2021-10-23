@@ -5,7 +5,8 @@ const Main = () => {
     return(
         <div style={{position: 'relative'}}>
             <div className={styles.block}></div>
-            <Card className={styles.card}/>
+            <Card/>
+            <div className={styles.purse}><b>10000 руб.</b></div>
         </div>
     )
 }

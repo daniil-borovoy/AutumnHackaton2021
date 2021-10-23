@@ -1,11 +1,12 @@
 .card {
-	width: 310px;
-	height: 190px;
+	top: 50px;
+	width: 350px;
+	height: 210px;
 	margin: 0 auto 30px;
 	background: #fff;
-	background: -webkit-linear-gradient(270deg, #15fcc5, #00ccff);
-	background: linear-gradient(270deg, #15fcc5, #00ccff);
-	border-radius: 20px;
+	background: linear-gradient(311deg, rgba(47,0,77,1) 0%, rgba(61,22,87,1) 12%, rgba(52,0,85,1) 38%, rgba(38,0,54,1) 87%, rgba(34,0,42,1) 100%);
+	border-radius: 14px;
+	box-shadow: 0px 14px 14px -6px rgba(0, 0, 0, 0.315);
 	padding: 20px;
 	box-sizing: border-box;
 	display: flex;
@@ -15,19 +16,19 @@
 }
 .cardHeaderInfo {
 	display: flex;
-	color: #333;
+	color: #fff;
 }
 .numberCard {
 	padding-left: 15px;
 	padding-right: 8px;
-	color: #333;
+	color: #fff;
 	position: relative;
 	&::before {
 		content: "";
 		position: absolute;
 		height: 5px;
 		width: 5px;
-		background: #333;
+		background: #fff;
 		top: 50%;
 		transform: translateY(-50%);
 		left: 0;
@@ -36,7 +37,7 @@
 }
 .endCard {
 	padding-left: 8px;
-	color: #333;
+	color: rgb(255, 255, 255);
 }
 .cardFooter {
 	display: flex;
@@ -46,8 +47,7 @@
 .nameCard {
 	margin-bottom: 5px;
 	font-size: 20px;
-	color: #000;
-	opacity: 0.7;
+	color: rgb(228, 228, 228);
 }
 .balanceCard {
 	font-size: 21px;
@@ -63,5 +63,5 @@
 .chipCard {
 	position: absolute;
 	width: 50px;
-	top: 27%;
+	top: 36%;
 }

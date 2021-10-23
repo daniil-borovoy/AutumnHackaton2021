@@ -6,6 +6,7 @@ import Main from './main/Main'
 import { useHttp } from '../hooks/http.hook'
 import BoxCard from './card/Card'
 import Transaction from './transaction/Transaction'
+import BottomMenu from './bottomMenu/BottomMenu'
 
 function App() {
 	const [data, setData] = useState(null)
@@ -25,6 +26,7 @@ function App() {
 			<div className={styles.logo}>
 				{/* <Chart data={data} /> */}
         <Main/>
+        <BottomMenu/>
 			</div>
 		)
 	}
