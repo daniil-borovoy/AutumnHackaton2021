@@ -3,6 +3,8 @@ import logo from '../logo.svg'
 import styles from './App.module.scss'
 import Chart from './chart/Chart'
 import { useHttp } from '../hooks/http.hook'
+import BoxCard from './card/Card'
+import Transaction from './transaction/Transaction'
 
 function App() {
 	const [data, setData] = useState(null)
@@ -20,7 +22,9 @@ function App() {
 	if (data) {
 		return (
 			<div className={styles.logo}>
-				<Chart data={data} />
+				{/* <Chart data={data} /> */}
+				{/* <BoxCard numberCard='4329' endCard='12/24' nameCard='Platinume' balanceCard='230 000 ₽' /> */}
+				<Transaction nameTransaction='Стипендия' sphereTransaction='Финансовые операции' valueTransaction='+18 829 р' />
 			</div>
 		)
 	}
