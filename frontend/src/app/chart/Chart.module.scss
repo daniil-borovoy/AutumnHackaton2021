@@ -44,3 +44,28 @@
     }
 }
 
+.timeChange {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+    .decrement{
+        border-radius: 25px 0 0 25px;
+    }
+    .increment {
+        border-radius: 0 25px 25px 0;
+    }
+    button {
+        border: none;
+        padding: 15px 30px;
+        margin: 10px;
+        font-size: 30px;
+        transition: .1s ease 0s;
+        &:hover{
+            background-color: darkgrey;
+        }
+        &:active {
+            background-color: green;
+        }
+    }
+}

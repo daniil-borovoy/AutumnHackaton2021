@@ -1,4 +1,4 @@
-import logo from '../logo.svg'
+// import logo from '../logo.svg'
 import styles from './App.module.scss'
 import userData from './data.json'
 import Chart from './chart/Chart'
