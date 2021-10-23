@@ -24,6 +24,7 @@
         },
         {
             "type": "INSIDE",
+            "date": 1634820242000,
             "tranDate": 1634820242000,
             "operationType": "DEBIT",
             "amount": 5000.0000,

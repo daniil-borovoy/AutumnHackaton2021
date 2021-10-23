@@ -1,0 +1,46 @@
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .chartTypes{
+        button{
+            margin: 10px;
+            border: none;
+            color:#fff;
+            background-color: darkcyan;
+            padding: 15px;
+            border-radius: 25px;
+            transition: .1s ease 0s;
+            &:hover{
+                color:#000;
+                background-color: rgb(255, 255, 255);
+            }
+            &.active {
+                background-color: darkgrey;
+                color:#000;
+            }
+        }
+    }
+    .chartPeriods{
+        button{
+            margin: 5px;
+            border: none;
+            color:#fff;
+            background-color: darkcyan;
+            padding: 15px;
+            border-radius: 25px;
+            transition: .1s ease 0s;
+            &:hover{
+                color:#000;
+                background-color: lightcyan;
+            }
+            &.active {
+            color:#000;
+            background-color: darkgrey;
+        }
+        }
+        
+    }
+}
+
