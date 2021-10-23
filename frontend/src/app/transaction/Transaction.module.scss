@@ -1,0 +1,19 @@
+.cardMedia {
+	height: 50px;
+	width: 50px;
+	padding-right: 10px;
+}
+
+.transaction {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	width: 330px;
+	margin: 0 auto;
+}
+
+.nameTransaction {
+	display: flex;
+	align-items: center;
+}
