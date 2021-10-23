@@ -9,7 +9,7 @@ function App() {
 	const { loading, request } = useHttp()
 	const getData = useCallback(async () => {
 		try {
-			const userData = await request('get', 'GET', null, {})
+			const userData = await request('api/get', 'GET', null, {})
 			setData(userData)
 		} catch (e) { console.log(e) }
 	}, [request])
