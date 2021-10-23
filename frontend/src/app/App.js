@@ -2,7 +2,11 @@ import { useCallback, useEffect, useState } from 'react'
 // import logo from '../logo.svg'
 import styles from './App.module.scss'
 import Chart from './chart/Chart'
+import Main from './main/Main'
 import { useHttp } from '../hooks/http.hook'
+import BoxCard from './card/Card'
+import Transaction from './transaction/Transaction'
+import BottomMenu from './bottomMenu/BottomMenu'
 
 function App() {
 	const [data, setData] = useState(null)
@@ -20,7 +24,9 @@ function App() {
 	if (data) {
 		return (
 			<div className={styles.logo}>
-				<Chart data={data} />
+				{/* <Chart data={data} /> */}
+        <Main/>
+        <BottomMenu/>
 			</div>
 		)
 	}
