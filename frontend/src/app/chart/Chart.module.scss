@@ -1,3 +1,14 @@
+h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+h2 {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-style: italic;
+}
 .buttons{
     display: flex;
     flex-direction: column;
@@ -47,25 +58,66 @@
 .timeChange {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    height: 100%;
+    button {
+        svg {
+            filter: invert(0.3);
+            transition: .5s ease 0s;
+        }
+        &:hover {
+            transform: scale(1.5);
+        }
+        &:hover svg {
+            filter: invert(1);
+        }
+        &:active{
+            transform: scale(0.9);
+        }
+    }
     .decrement{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 25px 0 0 25px;
+        border: none;
+        padding: 15px 30px;
+        margin: 10px;
+        font-size: 30px;
+        background-color: rgba(0, 0, 0, 0);
+        transition: .1s ease 0s;
+        
     }
     .increment {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0);
+        align-items: center;
         border-radius: 0 25px 25px 0;
-    }
-    button {
         border: none;
         padding: 15px 30px;
         margin: 10px;
         font-size: 30px;
         transition: .1s ease 0s;
-        &:hover{
-            background-color: darkgrey;
-        }
-        &:active {
-            background-color: green;
-        }
     }
+}
+
+.date {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-style: normal;
+    position: absolute;
+    z-index: 100;
+}
+.expenses{
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-style: normal;
+    position: absolute;
+    z-index: 100;
+    color: rgba(255, 255, 255, 0.5);
+    top: 160px;
 }

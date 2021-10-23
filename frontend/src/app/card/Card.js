@@ -1,7 +1,7 @@
-import { Box, Button, CardContent, Typography } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
+import { Box, Button, CardContent, Typography } from '@material-ui/core'
+import Card from '@material-ui/core/Card'
 import styles from './Card.module.scss'
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles({
 	mainCard: {
@@ -12,17 +12,17 @@ const useStyles = makeStyles({
 		background: 'linear-gradient(270deg, #15fcc5,#00ccff)',
 		boxShadow: '3px 3px 12px 0px rgba(50, 50, 50, 0.33)'
 	}
-});
+})
 
 const BoxCard = ({ numberCard, endCard, typeCard, balanceCard }) => {
-	const classes = useStyles();
+	const classes = useStyles()
 	return (
 		<Card className={classes.mainCard}>
 			<CardContent className={styles.cardContent}>
 				<Box className={styles.infoCard}>
 					<Typography className={styles.numberCard}>
 						{numberCard}
-					</Typography> |
+					</Typography>
 					<Typography className={styles.endCard}>
 						{endCard}
 					</Typography>
@@ -37,13 +37,10 @@ const BoxCard = ({ numberCard, endCard, typeCard, balanceCard }) => {
 						</Typography>
 					</Box>
 					<svg src="./img/visa-logo.svg" alt="" height={30} objectFit='cover'></svg>
-
 				</Box>
-
-
 			</CardContent>
 		</Card>
-	);
-};
+	)
+}
 
-export default BoxCard;
+export default BoxCard

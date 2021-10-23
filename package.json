@@ -25,6 +25,7 @@
   "dependencies": {
     "config": "^3.3.6",
     "cross-env": "^7.0.3",
+    "express": "^4.17.1",
     "mongoose": "^6.0.12"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import logo from '../logo.svg'
+// import logo from '../logo.svg'
 import styles from './App.module.scss'
 import Chart from './chart/Chart'
 import { useHttp } from '../hooks/http.hook'
