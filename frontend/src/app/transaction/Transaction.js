@@ -7,12 +7,12 @@ const Transaction = ({ nameTransaction, sphereTransaction, valueTransaction, mcc
 			<img className={styles.transactionLogo} src={mccImg} alt="" />
 			<div className={styles.transactionInfo}>
 				<div className={styles.transactionContent}>
-					<p className={styles.transactionName}>
+					<div className={styles.transactionName}>
 						{nameTransaction}
-					</p>
-					<p className={styles.transactionSphere}>
+					</div>
+					<div className={styles.transactionSphere}>
 						{sphereTransaction}
-					</p>
+					</div>
 				</div>
 				<div className={styles.transactionValue}>
 					{valueTransaction}
