@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
 // import logo from '../logo.svg'
 import styles from './App.module.scss'
 import Chart from './chart/Chart'
@@ -26,7 +27,16 @@ function App() {
 		return (
 			<div className={styles.app}>
 				<Main/>
-				<Chart data={data} />
+				<Router>
+					<div style={{marginTop: '100px'}}>
+						<NavLink to='/chart'>График</NavLink>
+						<NavLink to='/transactions'>Транзакции</NavLink>
+					</div>
+					<Switch>
+						<Route path='/chart'><Chart data={data} /></Route>
+						<Route path='/transactions'><Transaction /></Route>
+					</Switch>
+				</Router>
 				<BottomMenu/>
 				{ isMobile ? null :
 					<div className={styles.log}>

@@ -43,9 +43,9 @@ const dateConverter = (data, date) => {
   return _.groupBy(data, 'monthNumber')[date]
 }
 const categorySumm = (data, mcc) => {
-  const withoutSymbolLength = Object.keys(data).length
+  // const withoutSymbolLength = Object.keys(data).length
   let s = 0
-  for (let i = 0; i < mcc.length; i++) {
+  for (let i = 1; i < mcc.length; i++) {
     for (let j = 0; j < data[mcc[i]].length; j++) {
       s += data[mcc[i]][j].amount
     }
@@ -100,9 +100,6 @@ const dataConverter = (data, type, period, date) => {
         'color': 'hsl(85, 70%, 50%)'
       })
   }
-
-  // console.log(sortArray)
-
   // определяем набиолее мелкие затраты (10% от всей суммы) и заносим в группу 'Прочие' и сразу в сортированный массив
   // other(convertData, mcc, summ, sortArray)
   if (sortArray.length) {
@@ -141,7 +138,7 @@ const Chart = ({ data }) => {
             arcLabelsSkipAngle={10}
         ></ResponsivePie>
         <h2 className={styles.date}>{months[date]} 2021</h2>
-        {/* <p className={styles.expenses}>Расходы</p> */}
+        {dataConverter(data, type, period, date).length ? <p className={styles.summ}>{categorySumm(convertData, Object.keys(convertData))} руб.</p> : <p className={styles.expenses}>Расходы отсутвтуют</p>}
       {/* <p style={{color: '#fff'}}>Месяц {date}</p> */}
         <button className={styles.increment} onClick={() => setDate(date < 11 ? date + 1 : date)}><svg width={15}  viewBox="0 0 5 9">
         <path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" /></svg></button>
