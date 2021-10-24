@@ -7,6 +7,7 @@ import Main from './main/Main'
 import { useHttp } from '../hooks/http.hook'
 import BoxCard from './card/Card'
 import Transaction from './transaction/Transaction'
+import TransactionList from './TransactionList/TransactionList'
 import BottomMenu from './bottomMenu/BottomMenu'
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
 					</div>
 					<Switch>
 						<Route path='/chart'><Chart data={data} /></Route>
-						<Route path='/transactions'><Transaction /></Route>
+						<Route path='/transactions'><TransactionList data={data}/></Route>
 					</Switch>
 				</Router>
 				<BottomMenu/>

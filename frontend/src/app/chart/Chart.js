@@ -7,7 +7,7 @@ import styles from './Chart.module.scss'
 let _ = require('lodash')
 const months = [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь","Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ]
 
-const mccDecoder = (mcc) => {
+export const mccDecoder = (mcc) => {
   for (let i = 0; i < MCC.length; i++) {
     if ( MCC[i].mcc === mcc) {
       // console.log("asdad",MCC[i].edited_description)

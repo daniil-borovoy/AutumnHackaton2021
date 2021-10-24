@@ -2,18 +2,40 @@
 	height: 50px;
 	width: 50px;
 	padding-right: 10px;
-}
-
-.transaction {
+	}
+	
+	.transaction {
+	display: flex;
+	align-items: center;
+	padding: 25px;
+	max-width: 500px;
+	height: 80px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	background: #fff;
+	border-radius: 20px;
+	}
+	.transactionLogo {
+	height: 50px;
+	width: 50px;
+	}
+	.transactionInfo {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px;
-	width: 330px;
-	margin: 0 auto;
-}
-
-.nameTransaction {
-	display: flex;
-	align-items: center;
-}
+	width: 100%;
+	padding-left: 20px;
+	}
+	.transactionName {
+	font-size: 22px;
+	color: #444;
+	margin-bottom: 5px;
+	}
+	.transactionSphere {
+	color: #444;
+	}
+	
+	.transactionValue {
+	color: #444;
+	}
+	
