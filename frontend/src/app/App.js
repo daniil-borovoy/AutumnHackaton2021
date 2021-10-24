@@ -6,6 +6,7 @@ import Main from './main/Main'
 import { useHttp } from '../hooks/http.hook'
 import BoxCard from './card/Card'
 import Transaction from './transaction/Transaction'
+import TransactionList from './TransactionList/TransactionList'
 import BottomMenu from './bottomMenu/BottomMenu'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
 		return (
 			<div className={styles.app}>
 				<Main/>
+        <TransactionList data={data}/>
 				<Chart data={data} />
 				<BottomMenu/>
 				{ isMobile ? null :
