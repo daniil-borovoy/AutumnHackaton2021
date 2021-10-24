@@ -1,5 +1,5 @@
-import React from "react";
-import Transaction from "../transaction/Transaction";
+import React from "react"
+import Transaction from "../transaction/Transaction"
 import * as _ from 'lodash'
 import { mccDecoder } from '../chart/Chart'
 import basket from '../transaction/basket.svg'
@@ -10,9 +10,8 @@ import development from '../transaction/development.svg'
 
 const TransactionList = ({ data }) => {
     let transactionsArray = []
-    const decoder = require('../chart/Chart')
 
-    const imgSrc = ( mcc ) => {
+    const imgSrc = ( mcc ) => { //костылили для экономии времени
       if (mcc == '0') { return creditCard }
       else if (mcc == '5814') { return burger }
       else if (mcc == '6011') { return cash }
@@ -46,15 +45,12 @@ const TransactionList = ({ data }) => {
           } 
         }
         transactionsArray = _.orderBy(data, 'date').reverse()
-        console.log(transactionsArray)
-        // return _.groupBy(data, 'monthNumber')[date]
       }
       dateConverter(data)
     return(
         <>{transactionsArray.map((i, j) => {return(
         <Transaction
             key={j}
-            // nameTransaction={i.operationType}
             nameTransaction={name(i.merchantName, i.operationType)}
             sphereTransaction={mccDecoder(String(i.MCC))}
             mccImg={imgSrc(i.MCC)}

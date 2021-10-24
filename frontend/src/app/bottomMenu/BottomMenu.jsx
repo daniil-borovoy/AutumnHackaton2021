@@ -1,7 +1,6 @@
 import styles from './BottomMenu.module.scss'
 import creditSvg from './creditCard.svg'
 import notifSvg from './notification.svg'
-import folderSvg from './folder.svg'
 import menuSvg from './menu.svg'
 import transaction from './transaction.svg'
 const BottomMenu = () => {

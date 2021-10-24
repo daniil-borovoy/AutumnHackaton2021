@@ -19,7 +19,7 @@ const Transaction = ({ nameTransaction, sphereTransaction, valueTransaction, mcc
 				</div>
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default Transaction;
+export default Transaction
