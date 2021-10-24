@@ -8,7 +8,7 @@ import TransactionList from './TransactionList/TransactionList'
 import BottomMenu from './bottomMenu/BottomMenu'
 
 function App() {
-	const [isMobile, setMobile] = useState((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)))
+	const isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
 	const [data, setData] = useState(null)
 	const { loading, request } = useHttp()
 	const getData = useCallback(async () => {
@@ -47,14 +47,7 @@ function App() {
 				}
 			</div>
 		)
-	}
-
-	return (
-		<>
-			<div className={styles.logo}>
-			</div>
-		</>
-	)
+	} return null
 }
 
 export default App

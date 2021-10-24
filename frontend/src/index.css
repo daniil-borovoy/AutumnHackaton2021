@@ -1,7 +1,7 @@
+/* Подключаем обнуляющие стили */
 @import-normalize;
 body {
   user-select: none;
-  /* overflow: hidden; */
   position: relative;
   margin: 0;
   padding: 0;
@@ -14,7 +14,6 @@ body {
 }
 #root{
   display: block;
-  /* overflow: hidden; */
   position: relative;
   width: 100vw;
   height: 100vh;
