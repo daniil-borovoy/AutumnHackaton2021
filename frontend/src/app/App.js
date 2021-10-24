@@ -5,6 +5,7 @@ import Chart from './chart/Chart'
 import { useHttp } from '../hooks/http.hook'
 import BoxCard from './card/Card'
 import Transaction from './transaction/Transaction'
+import Info from './info/Info'
 
 function App() {
 	const [data, setData] = useState(null)
@@ -24,7 +25,8 @@ function App() {
 			<div className={styles.logo}>
 				{/* <Chart data={data} /> */}
 				{/* <BoxCard numberCard='4329' endCard='12/24' nameCard='Platinume' balanceCard='230 000 ₽' /> */}
-				<Transaction nameTransaction='Стипендия' sphereTransaction='Финансовые операции' valueTransaction='+18 829 р' />
+				{/* <Transaction nameTransaction='Стипендия' sphereTransaction='Финансовые операции' valueTransaction='+18 829 р' /> */}
+				<Info infoData='24.03.2021' infoAuthor='Universal Bank: Артемий В.' infoSum='400 000 ₽' />
 			</div>
 		)
 	}

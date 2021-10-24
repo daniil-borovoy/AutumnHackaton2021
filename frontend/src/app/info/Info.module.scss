@@ -1,0 +1,80 @@
+.info {
+	color: #000;
+	text-align: center;
+	background: #fff;
+	height: 100vh;
+}
+.infoIcon {
+	width: 150px;
+	height: 150px;
+	margin-top: 50px;
+}
+.infoContent {
+	border-bottom: 1px solid #999;
+	border-top: 1px solid #999;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+.infoData {
+	color: #999;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+.infoAuthor {
+	margin-bottom: 15px;
+}
+.infoSum {
+	font-size: 26px;
+	margin-bottom: 25px;
+}
+.infoFooter {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 22px;
+}
+.infoPayment {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.infoPaymentText {
+	margin-bottom: 10px;
+}
+.infoPaymentCard {
+	position: relative;
+	padding-left: 30px;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		height: 5px;
+		width: 5px;
+		background: #000;
+		border-radius: 100%;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 13px;
+		height: 5px;
+		width: 5px;
+		background: #000;
+		border-radius: 100%;
+	}
+}
+.infoCommission {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.infoCommissionText {
+	margin-bottom: 10px;
+}
