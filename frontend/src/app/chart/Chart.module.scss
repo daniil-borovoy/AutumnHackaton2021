@@ -59,8 +59,7 @@ h2 {
             color:#000;
             background-color: darkgrey;
         }
-        }
-        
+        } 
     }
 }
 .timeChange {
@@ -71,9 +70,6 @@ h2 {
     height: 100%;
     position: relative;
     button {
-        &:hover {
-            // transform: scale(1.1);
-        }
         &:active{
             opacity: .5;
         }
@@ -108,7 +104,6 @@ h2 {
         transition: .1s ease 0s;
     }
 }
-
 .date {
     text-align: center;
     color: #000;

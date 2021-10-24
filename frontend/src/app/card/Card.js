@@ -34,7 +34,7 @@ const Card = ({ numberCard, endCard, nameCard, balanceCard }) => {
 				</div>
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default Card;
+export default Card
