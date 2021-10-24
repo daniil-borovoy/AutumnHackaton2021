@@ -2,10 +2,15 @@ import { useCallback, useEffect, useState } from 'react'
 import logo from '../logo.svg'
 import styles from './App.module.scss'
 import Chart from './chart/Chart'
+import Main from './main/Main'
 import { useHttp } from '../hooks/http.hook'
 import BoxCard from './card/Card'
 import Transaction from './transaction/Transaction'
+<<<<<<< HEAD
 import Info from './info/Info'
+=======
+import BottomMenu from './bottomMenu/BottomMenu'
+>>>>>>> 2684861707c612b2e1d31f325f06eb9de8a014af
 
 function App() {
 	const [data, setData] = useState(null)
@@ -24,9 +29,14 @@ function App() {
 		return (
 			<div className={styles.logo}>
 				{/* <Chart data={data} /> */}
+<<<<<<< HEAD
 				{/* <BoxCard numberCard='4329' endCard='12/24' nameCard='Platinume' balanceCard='230 000 ₽' /> */}
 				{/* <Transaction nameTransaction='Стипендия' sphereTransaction='Финансовые операции' valueTransaction='+18 829 р' /> */}
 				<Info infoData='24.03.2021' infoAuthor='Universal Bank: Артемий В.' infoSum='400 000 ₽' />
+=======
+        <Main/>
+        <BottomMenu/>
+>>>>>>> 2684861707c612b2e1d31f325f06eb9de8a014af
 			</div>
 		)
 	}

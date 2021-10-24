@@ -8,10 +8,10 @@ const Card = ({ numberCard, endCard, nameCard, balanceCard }) => {
 			<div className={styles.cardHeader}>
 				<div className={styles.cardHeaderInfo}>
 					<div className={styles.numberCard}>
-						{numberCard}
+						5746
 					</div> |
 					<div className={styles.endCard}>
-						{endCard}
+						5363
 					</div>
 				</div>
 			</div>
@@ -19,7 +19,7 @@ const Card = ({ numberCard, endCard, nameCard, balanceCard }) => {
 			<div className={styles.cardFooter}>
 				<div className={styles.cardFooterInfo}>
 					<div className={styles.nameCard}>
-						{nameCard}
+						<b>Ivan Ivanov</b>
 					</div>
 					<div className={styles.balanceCard}>
 						{balanceCard}
