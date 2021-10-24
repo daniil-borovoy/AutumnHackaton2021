@@ -1,11 +1,17 @@
+.chart {
+    height: 200px;
+    margin: 100px 0 65px 0;
+    padding-bottom: 200px;
+}
 h1 {
     text-align: center;
-    color: #fff;
+    color: #000;
     font-weight: 700;
 }
 h2 {
     text-align: center;
-    color: #fff;
+    color: #333;
+    opacity: .9;
     font-weight: 700;
     font-style: italic;
 }
@@ -61,41 +67,39 @@ h2 {
     justify-content: center;
     align-items: center;
     height: 100%;
+    position: relative;
     button {
-        svg {
-            filter: invert(0.3);
-            transition: .5s ease 0s;
-        }
         &:hover {
-            transform: scale(1.5);
-        }
-        &:hover svg {
-            filter: invert(1);
+            // transform: scale(1.1);
         }
         &:active{
-            transform: scale(0.9);
+            opacity: .5;
         }
     }
     .decrement{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0px;
         border-radius: 25px 0 0 25px;
         border: none;
         padding: 15px 30px;
         margin: 10px;
+        z-index: 100;
         font-size: 30px;
         background-color: rgba(0, 0, 0, 0);
         transition: .1s ease 0s;
         
     }
     .increment {
-        display: flex;
-        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0px;
         background-color: rgba(0, 0, 0, 0);
-        align-items: center;
         border-radius: 0 25px 25px 0;
         border: none;
+        z-index: 100;
         padding: 15px 30px;
         margin: 10px;
         font-size: 30px;
@@ -105,7 +109,7 @@ h2 {
 
 .date {
     text-align: center;
-    color: #fff;
+    color: #000;
     font-weight: 700;
     font-style: normal;
     position: absolute;
@@ -113,11 +117,15 @@ h2 {
 }
 .expenses{
     text-align: center;
-    color: #fff;
+    color: #000;
     font-weight: 700;
     font-style: normal;
     position: absolute;
     z-index: 100;
     color: rgba(255, 255, 255, 0.5);
     top: 160px;
+}
+
+@media (max-width: 425px) {
+    
 }

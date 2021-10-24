@@ -9,6 +9,7 @@ import Transaction from './transaction/Transaction'
 import BottomMenu from './bottomMenu/BottomMenu'
 
 function App() {
+	const [isMobile, setMobile] = useState((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)))
 	const [data, setData] = useState(null)
 	const { loading, request } = useHttp()
 	const getData = useCallback(async () => {
@@ -23,17 +24,24 @@ function App() {
 	}, [])
 	if (data) {
 		return (
-			<div className={styles.logo}>
-				{/* <Chart data={data} /> */}
-        <Main/>
-        <BottomMenu/>
+			<div className={styles.app}>
+				<Main/>
+				<Chart data={data} />
+				<BottomMenu/>
+				{ isMobile ? null :
+					<div className={styles.log}>
+						<h1>Для запустка приложения необходим мобильный телефон!</h1>
+					</div>
+				}
 			</div>
 		)
 	}
 
 	return (
-		<div className={styles.logo}>
-		</div>
+		<>
+			<div className={styles.logo}>
+			</div>
+		</>
 	)
 }
 
