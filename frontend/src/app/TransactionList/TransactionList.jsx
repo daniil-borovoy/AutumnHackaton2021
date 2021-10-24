@@ -20,6 +20,17 @@ const TransactionList = ({ data }) => {
       else { return basket }
     }
 
+    const name = ( merchantName, operationType ) => {
+      if (merchantName) { return merchantName }
+      else if (operationType == 'DEBIT') { return 'Списание' }
+      else { return 'Пополнение' }
+    }
+
+    const value = ( amount, operationType ) => {
+      if (operationType == 'DEBIT') { return '-' + amount + ' руб.' }
+      else { return '+' + amount + ' руб.' }
+    }
+
     const dateConverter = (data, date) => {
         for (let i = 0; i < data.length; i++) {
           let tranDate
@@ -43,10 +54,11 @@ const TransactionList = ({ data }) => {
         <>{transactionsArray.map((i, j) => {return(
         <Transaction
             key={j}
-            nameTransaction={i.type}
+            // nameTransaction={i.operationType}
+            nameTransaction={name(i.merchantName, i.operationType)}
             sphereTransaction={mccDecoder(String(i.MCC))}
             mccImg={imgSrc(i.MCC)}
-            valueTransaction={i.amount}
+            valueTransaction={value(i.amount, i.operationType)}
         />)})}</>
     )
 }
