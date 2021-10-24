@@ -29,9 +29,13 @@ function App() {
 			<div className={styles.app}>
 				<Main/>
 				<Router>
-					<div style={{marginTop: '100px'}}>
-						<NavLink to='/chart'>График</NavLink>
-						<NavLink to='/transactions'>Транзакции</NavLink>
+					<div className={styles.navButtons}>
+						<NavLink activeClassName={styles.activeNavButton} to='/chart' >
+							<button className={styles.navButton}>График</button>
+						</NavLink>
+						<NavLink activeClassName={styles.activeNavButton} to='/transactions' >
+							<button className={styles.navButton}>Транзакции</button>
+						</NavLink>
 					</div>
 					<Switch>
 						<Route path='/chart'><Chart data={data} /></Route>
