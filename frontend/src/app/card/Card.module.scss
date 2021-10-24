@@ -1,6 +1,7 @@
 .card {
 	top: 50px;
-	width: 350px;
+	width: 90%;
+	max-width: 340px;
 	height: 210px;
 	margin: 0 auto 30px;
 	background: #fff;
@@ -13,6 +14,10 @@
 	flex-direction: column;
 	justify-content: space-between;
 	position: relative;
+	transition: .1s ease 0s;
+	&:active {
+		transform: scale(0.98);
+	}
 }
 .cardHeaderInfo {
 	display: flex;
@@ -41,7 +46,7 @@
 }
 .cardFooter {
 	display: flex;
-	align-items: flex-end;
+	align-items: center  ;
 	justify-content: space-between;
 }
 .nameCard {
@@ -64,4 +69,10 @@
 	position: absolute;
 	width: 50px;
 	top: 36%;
+}
+
+@media (max-width: 425px) {
+    .card {
+	height: 180px;
+	}
 }
