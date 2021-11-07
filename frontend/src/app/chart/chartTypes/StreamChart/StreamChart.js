@@ -3,7 +3,6 @@ import { ResponsiveStream } from '@nivo/stream'
 import styles from './StreamChart.module.scss'
 
 export const StreamChart = ({ data, dataConverterPercent }) => {
-  console.log(dataConverterPercent(data))
   return (
     <div className={styles.streamGraph}>
       <ResponsiveStream
