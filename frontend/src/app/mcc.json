@@ -1,32 +1,32 @@
 [
-    {
-        "mcc": "0",
-        "edited_description": "Операции по карте",
-        "img_url": ""
-    },
-    {
-        "mcc": "5814",
-        "edited_description": "Фастфуд",
-        "img_url": ""
-    },
-    {
-        "mcc": "5999",
-        "edited_description": "Розничные магазины",
-        "img_url": ""
-    },
-    {
-        "mcc": "6011",
-        "edited_description": "Снятие наличных",
-        "img_url": ""
-    },
-    {
-        "mcc": "6012",
-        "edited_description": "Торговля и услуги",
-        "img_url": ""
-    },
-    {
-        "mcc": "7372",
-        "edited_description": "Программирование",
-        "img_url": ""
-    }
+  {
+    "mcc": "0",
+    "edited_description": "Операции по карте",
+    "img_url": ""
+  },
+  {
+    "mcc": "5814",
+    "edited_description": "Фастфуд",
+    "img_url": ""
+  },
+  {
+    "mcc": "5999",
+    "edited_description": "Розничные магазины",
+    "img_url": ""
+  },
+  {
+    "mcc": "6011",
+    "edited_description": "Снятие наличных",
+    "img_url": ""
+  },
+  {
+    "mcc": "6012",
+    "edited_description": "Торговля и услуги",
+    "img_url": ""
+  },
+  {
+    "mcc": "7372",
+    "edited_description": "Программирование",
+    "img_url": ""
+  }
 ]

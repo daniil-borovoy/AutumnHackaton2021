@@ -1,78 +1,93 @@
 .card {
-	top: 50px;
-	width: 90%;
-	max-width: 340px;
-	height: 210px;
-	margin: 0 auto 30px;
-	background: #fff;
-	background: linear-gradient(311deg, rgba(47,0,77,1) 0%, rgba(61,22,87,1) 12%, rgba(52,0,85,1) 38%, rgba(38,0,54,1) 87%, rgba(34,0,42,1) 100%);
-	border-radius: 14px;
-	box-shadow: 0px 14px 14px -6px rgba(0, 0, 0, 0.315);
-	padding: 20px;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	position: relative;
-	transition: .1s ease 0s;
-	&:active {
-		transform: scale(0.98);
-	}
-}
-.cardHeaderInfo {
-	display: flex;
-	color: #fff;
-}
-.numberCard {
-	padding-left: 15px;
-	padding-right: 8px;
-	color: #fff;
-	position: relative;
-	&::before {
-		content: "";
-		position: absolute;
-		height: 5px;
-		width: 5px;
-		background: #fff;
-		top: 50%;
-		transform: translateY(-50%);
-		left: 0;
-		border-radius: 100%;
-	}
-}
-.endCard {
-	padding-left: 8px;
-	color: rgb(255, 255, 255);
-}
-.cardFooter {
-	display: flex;
-	align-items: center  ;
-	justify-content: space-between;
-}
-.nameCard {
-	margin-bottom: 5px;
-	font-size: 20px;
-	color: rgb(228, 228, 228);
-}
-.balanceCard {
-	font-size: 21px;
-}
-.logoCard {
-	margin-right: 10px;
-	svg {
-		color: #fff;
-		height: 40px;
-		width: 50px;
-	}
-}
-.chipCard {
-	position: absolute;
-	width: 50px;
-	top: 36%;
+  top: 50px;
+  width: 90%;
+  max-width: 340px;
+  height: 210px;
+  margin: 0 auto 30px;
+  background: #fff;
+  background: linear-gradient(
+    311deg,
+    rgba(47, 0, 77, 1) 0%,
+    rgba(61, 22, 87, 1) 12%,
+    rgba(52, 0, 85, 1) 38%,
+    rgba(38, 0, 54, 1) 87%,
+    rgba(34, 0, 42, 1) 100%
+  );
+  border-radius: 14px;
+  box-shadow: 0px 14px 14px -6px rgba(0, 0, 0, 0.315);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: 0.1s ease 0s;
+  &:active {
+    transform: scale(0.98);
+  }
+
+  .cardHeaderInfo {
+    display: flex;
+    color: #fff;
+
+    .numberCard {
+      padding-left: 15px;
+      padding-right: 8px;
+      color: #fff;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        height: 5px;
+        width: 5px;
+        background: #fff;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        border-radius: 100%;
+      }
+    }
+
+    .endCard {
+      padding-left: 8px;
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  .cardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nameCard {
+      margin-bottom: 5px;
+      font-size: 20px;
+      color: rgb(228, 228, 228);
+    }
+
+    .balanceCard {
+      font-size: 21px;
+    }
+
+    .logoCard {
+      margin-right: 10px;
+      svg {
+        color: #fff;
+        height: 40px;
+        width: 50px;
+      }
+    }
+  }
+
+  .chipCard {
+    position: absolute;
+    width: 50px;
+    top: 36%;
+  }
 }
 
 @media (max-width: 425px) {
-    .card {
-	height: 180px;
-	}
+  .card {
+    height: 180px;
+  }
 }

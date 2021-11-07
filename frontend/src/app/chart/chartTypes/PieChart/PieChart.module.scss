@@ -1,0 +1,74 @@
+.timeChange {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  position: relative;
+
+  @media (max-width: 350px) {
+    height: 200px;
+  }
+
+  button {
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  .decrement {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    border-radius: 25px 0 0 25px;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.1s ease 0s;
+  }
+
+  .increment {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0 25px 25px 0;
+    border: none;
+    z-index: 100;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 30px;
+    transition: 0.1s ease 0s;
+  }
+}
+
+.date {
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  position: absolute;
+  z-index: 1;
+}
+
+.expenses {
+  text-align: center;
+  color: rgb(102, 102, 102);
+  font-weight: 700;
+  font-size: 16px;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+}
+
+.summ {
+  position: absolute;
+  top: 50%;
+  color: rgb(75, 75, 75);
+  font-size: 16px;
+  font-weight: 700;
+}

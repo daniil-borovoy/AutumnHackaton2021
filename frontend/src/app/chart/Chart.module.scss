@@ -1,137 +1,26 @@
 .chart {
-    height: 250px;
-    padding: 100px 0 65px 0;
-    padding-bottom: 200px;
-    overflow: hidden;
-    @media (max-width: 350px) {
-        height: 200px;
-    }
+  display: block;
+  margin-bottom: 55px;
+  overflow: hidden;
 }
-h1 {
-    text-align: center;
+.toogleChartButtons {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  .toogleChartButton {
+    border: none;
+    width: 100px;
+    height: 30px;
     color: #000;
-    font-weight: 700;
-}
-h2 {
-    text-align: center;
-    color: #333;
-    opacity: .9;
-    font-weight: 700;
-}
-.buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .chartTypes{
-        button{
-            margin: 10px;
-            border: none;
-            color:#fff;
-            background-color: darkcyan;
-            padding: 15px;
-            border-radius: 25px;
-            transition: .1s ease 0s;
-            &:hover{
-                color:#000;
-                background-color: rgb(255, 255, 255);
-            }
-            &.active {
-                background-color: darkgrey;
-                color:#000;
-            }
-        }
+    margin: 5px;
+    background: #fff;
+    border-radius: 5px;
+    &.active {
+      background-color: rgb(124, 124, 124);
     }
-    .chartPeriods{
-        button{
-            margin: 5px;
-            border: none;
-            color:#fff;
-            background-color: darkcyan;
-            padding: 15px;
-            border-radius: 25px;
-            transition: .1s ease 0s;
-            &:hover{
-                color:#000;
-                background-color: lightcyan;
-            }
-            &.active {
-            color:#000;
-            background-color: darkgrey;
-        }
-        } 
+    &:active {
+      opacity: 0.5;
     }
-}
-.timeChange {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    position: relative;
-    button {
-        &:active{
-            opacity: .5;
-        }
-    }
-    .decrement{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0px;
-        border-radius: 25px 0 0 25px;
-        border: none;
-        padding: 15px 30px;
-        margin: 10px;
-        z-index: 100;
-        font-size: 30px;
-        background-color: rgba(0, 0, 0, 0);
-        transition: .1s ease 0s;
-        
-    }
-    .increment {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0px;
-        background-color: rgba(0, 0, 0, 0);
-        border-radius: 0 25px 25px 0;
-        border: none;
-        z-index: 100;
-        padding: 15px 30px;
-        margin: 10px;
-        font-size: 30px;
-        transition: .1s ease 0s;
-    }
-}
-.date {
-    text-align: center;
-    color: #000;
-    font-weight: 700;
-    position: absolute;
-    z-index: 1;
-}
-.expenses{
-    text-align: center;
-    color: rgb(102, 102, 102);
-    font-weight: 700;
-    font-size: 16px;
-    position: absolute;
-    z-index: 100;
-    top: 50%;
-}
-.summ {
-    position: absolute;
-    top: 50%;
-    color: rgb(75, 75, 75);
-    font-size: 16px;
-    font-weight: 700;
-}
-.streamGraph{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    margin: 0 auto;
-    width: 80%;
-    height: 100%;
+  }
 }

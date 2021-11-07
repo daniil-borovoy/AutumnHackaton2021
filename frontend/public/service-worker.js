@@ -1,21 +1,22 @@
-let doCache = false
+let doCache = true
 
 // имя кэша
-var CACHE_NAME = 'pwa-cache'
+var CACHE_NAME = 'pwa-cache-v1'
 
 // удаляем старый кеш
-self.addEventListener("activate", event => {
+self.addEventListener('activate', (event) => {
   const cacheWhitelist = [CACHE_NAME]
   event.waitUntil(
-    caches.keys()
-      .then(keyList =>
-        Promise.all(keyList.map(key => {
+    caches.keys().then((keyList) =>
+      Promise.all(
+        keyList.map((key) => {
           if (!cacheWhitelist.includes(key)) {
             console.log('Deleting cache: ' + key)
             return caches.delete(key)
           }
-        }))
+        })
       )
+    )
   )
 })
 
@@ -23,30 +24,27 @@ self.addEventListener("activate", event => {
 self.addEventListener('install', (event) => {
   if (doCache) {
     event.waitUntil(
-      caches.open(CACHE_NAME)
-        .then(function(cache) {
-          fetch("asset-manifest.json")
-            .then(response => {
-              response.json()
-            })
-            .then(assets => {
-              const urlsToCache = [
-                "/"
-              ]
-              cache.addAll(urlsToCache)
-              console.log('cached')
-            })
-        })
+      caches.open(CACHE_NAME).then(function (cache) {
+        fetch('asset-manifest.json')
+          .then((response) => {
+            response.json()
+          })
+          .then((assets) => {
+            const urlsToCache = ['/'] // указать нужный кэш
+            cache.addAll(urlsToCache)
+            console.log('cached')
+          })
+      })
     )
   }
 })
 
 self.addEventListener('fetch', (event) => {
-    if (doCache) {
-      event.respondWith(
-          caches.match(event.request).then( (response) => {
-              return response || fetch(event.request)
-          })
-      )
-    }
+  if (doCache) {
+    event.respondWith(
+      caches.match(event.request).then((response) => {
+        return response || fetch(event.request)
+      })
+    )
+  }
 })
