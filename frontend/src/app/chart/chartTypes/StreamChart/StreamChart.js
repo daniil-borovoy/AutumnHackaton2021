@@ -38,7 +38,6 @@ export const StreamChart = ({ data, dataConverterPercent }) => {
         }}
         enableGridX={true}
         enableGridY={false}
-        offsetType="silhouette"
         colors={{ scheme: 'nivo' }}
         fillOpacity={0.85}
         borderColor={{ theme: 'background' }}

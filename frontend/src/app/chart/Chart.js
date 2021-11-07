@@ -13,8 +13,6 @@ import {
 } from './functions'
 
 const Chart = ({ data }) => {
-  const [type, setType] = useState('expenses')
-  const [period, setPeriod] = useState('month')
   const initialDate = new Date()
   const [chartType, setChartType] = useState('expenses')
   const [date, setDate] = useState(initialDate.getUTCMonth())
@@ -27,8 +25,6 @@ const Chart = ({ data }) => {
           setDate={setDate}
           date={date}
           dataConverter={dataConverter}
-          type={type}
-          period={period}
           months={months}
           categorySumm={categorySumm}
           convertData={convertData}
@@ -44,8 +40,6 @@ const Chart = ({ data }) => {
             setDate={setDate}
             date={date}
             dataConverter={dataConverter}
-            type={type}
-            period={period}
             months={months}
             categorySumm={categorySumm}
             convertData={convertData}

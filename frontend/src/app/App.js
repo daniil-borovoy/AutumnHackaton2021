@@ -3,7 +3,7 @@ import styles from './App.module.scss'
 import Chart from './chart/Chart'
 import Main from './main/Main'
 import { useHttp } from '../hooks/http.hook'
-import TransactionList from './TransactionList/TransactionList'
+import TransactionList from './transactionList/TransactionList'
 import BottomMenu from './bottomMenu/BottomMenu'
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   const [navToogle, setNavToogle] = useState(false)
   const { request } = useHttp()
 
-  const getData = useCallback(async () => {
+  const fetchData = useCallback(async () => {
     try {
       const userData = await request('api/get', 'GET', null, {})
       setData(userData)
@@ -25,8 +25,8 @@ function App() {
   }, [request])
 
   useEffect(() => {
-    getData()
-  }, [])
+    fetchData()
+  }, [fetchData])
 
   if (data) {
     if (!isMobile) {

@@ -13,13 +13,13 @@ const TransactionList = ({ data }) => {
 
   const imgSrc = (mcc) => {
     //костылили для экономии времени
-    if (mcc == '0') {
+    if (mcc === 0) {
       return creditCard
-    } else if (mcc == '5814') {
+    } else if (mcc === 5814) {
       return burger
-    } else if (mcc == '6011') {
+    } else if (mcc === 6011) {
       return cash
-    } else if (mcc == '7372') {
+    } else if (mcc === 7372) {
       return development
     } else {
       return basket
@@ -29,7 +29,7 @@ const TransactionList = ({ data }) => {
   const name = (merchantName, operationType) => {
     if (merchantName) {
       return merchantName
-    } else if (operationType == 'DEBIT') {
+    } else if (operationType === 'DEBIT') {
       return 'Списание'
     } else {
       return 'Пополнение'
@@ -37,7 +37,7 @@ const TransactionList = ({ data }) => {
   }
 
   const value = (amount, operationType) => {
-    if (operationType == 'DEBIT') {
+    if (operationType === 'DEBIT') {
       return '-' + amount + ' руб.'
     } else {
       return '+' + amount + ' руб.'

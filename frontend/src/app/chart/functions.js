@@ -62,7 +62,6 @@ export const categorySumm = (data, mcc) => {
 
 export const dataConverterPercent = (data, date) => {
   let convertData = []
-  let monthsData = []
   let All = []
   for (let i = 0; i < 12; i++) {
     convertData = dateConverter(data, i) // сортируем по дате
