@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './Card.module.scss'
 
-const Card = ({ numberCard, endCard, nameCard, balanceCard }) => {
-  //данные для примера
+export const Card = ({ numberCard, endCard, nameCard, balanceCard }) => {
+  // данные для примера
   return (
     <div className={styles.card}>
       <svg
@@ -54,5 +54,3 @@ const Card = ({ numberCard, endCard, nameCard, balanceCard }) => {
     </div>
   )
 }
-
-export default Card

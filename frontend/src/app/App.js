@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import styles from './App.module.scss'
-import Chart from './chart/Chart'
-import Main from './main/Main'
+import { Chart } from './chart/Chart'
+import { Main } from './main/Main'
 import { useHttp } from '../hooks/http.hook'
-import TransactionList from './transactionList/TransactionList'
-import BottomMenu from './bottomMenu/BottomMenu'
+import { TransactionList } from './transactionList/TransactionList'
+import { BottomMenu } from './bottomMenu/BottomMenu'
 
-function App() {
+const App = () => {
   const isMobile =
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent

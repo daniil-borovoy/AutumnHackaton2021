@@ -35,19 +35,20 @@ export const calcValue = (tranzaktions) => {
   }
 }
 
-export const dateConverter = (data, date) => {
-  for (let i = 0; i < data.length; i++) {
-    let tranDate
-    tranDate = new Date(data[i].date)
-    if (data[i].tranDate) {
-      data[i].tranDate = tranDate.toUTCString()
-      data[i].monthNumber = tranDate.getUTCMonth()
-    } else {
-      data[i].date = tranDate.toUTCString()
-      data[i].monthNumber = tranDate.getUTCMonth()
-    }
-  }
-  return _.groupBy(data, 'monthNumber')[date]
+export const dateConverter = (data, selectedTime) => {
+  let sortData = _.sortBy(data, 'date')
+
+  sortData.forEach((tranzaktion) => {
+    tranzaktion.yearNumber = new Date(tranzaktion.date).getUTCFullYear()
+    tranzaktion.monthNumber = new Date(tranzaktion.date).getUTCMonth() // 0 - 11
+    tranzaktion.dayNumber = new Date(tranzaktion.date).getUTCDay() // 0 - sunday
+    tranzaktion.dayTime = [
+      new Date(tranzaktion.date).getUTCHours(),
+      new Date(tranzaktion.date).getUTCMinutes(),
+    ]
+  })
+
+  return _.groupBy(sortData, 'monthNumber')[selectedTime]
 }
 
 export const categorySumm = (data, mcc) => {
@@ -102,12 +103,14 @@ export const getConvertData = (data, date) => {
   convertData = _.groupBy(convertData, 'MCC') // сортируем по типу транзакции
   return convertData
 }
-export const dataConverter = (data, type, period, date) => {
+
+export const dataConverter = (data, chartType, period, date) => {
   let sortArray = []
   convertData = dateConverter(data, date) // сортируем по дате
   convertData = _.groupBy(convertData, 'MCC') // сортируем по типу транзакции
   const mcc = Object.keys(convertData) // определяем номера транзацкций
   // заполняем сортированный массив
+
   for (let i = 0; i < mcc.length; i++) {
     if (mcc[i] === '0') {
       // временно пропускаем INSIDE транзакции
@@ -121,8 +124,5 @@ export const dataConverter = (data, type, period, date) => {
       color: 'hsl(85, 70%, 50%)',
     })
   }
-  if (sortArray.length) {
-    return sortArray
-  }
-  return []
+  return sortArray
 }

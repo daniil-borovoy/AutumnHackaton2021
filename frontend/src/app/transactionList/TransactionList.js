@@ -8,7 +8,7 @@ import cash from '../transaction/cash.svg'
 import creditCard from '../transaction/creditCard.svg'
 import development from '../transaction/development.svg'
 
-const TransactionList = ({ data }) => {
+export const TransactionList = ({ data }) => {
   let transactionsArray = []
 
   const imgSrc = (mcc) => {
@@ -77,5 +77,3 @@ const TransactionList = ({ data }) => {
     </>
   )
 }
-
-export default TransactionList

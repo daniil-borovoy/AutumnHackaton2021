@@ -12,7 +12,7 @@ import {
   getConvertData,
 } from './functions'
 
-const Chart = ({ data }) => {
+export const Chart = ({ data }) => {
   const initialDate = new Date()
   const [chartType, setChartType] = useState('expenses')
   const [date, setDate] = useState(initialDate.getUTCMonth())
@@ -83,5 +83,3 @@ const Chart = ({ data }) => {
   }
   return null
 }
-
-export default Chart

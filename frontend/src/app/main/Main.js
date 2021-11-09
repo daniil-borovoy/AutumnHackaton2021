@@ -1,8 +1,8 @@
 import React from 'react'
-import Card from '../card/Card'
+import { Card } from '../card/Card'
 import styles from './Main.module.scss'
 
-const Main = ({ navToogle, setNavToogle }) => {
+export const Main = ({ navToogle, setNavToogle }) => {
   return (
     <>
       <div style={{ position: 'relative' }}>
@@ -37,5 +37,3 @@ const Main = ({ navToogle, setNavToogle }) => {
     </>
   )
 }
-
-export default Main
